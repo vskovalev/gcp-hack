@@ -32,12 +32,12 @@ const routes = [
       href: '/image',
     },
     
-    // {
-    //   label: 'Text Summarization',
-    //   icon: ClipboardEdit ,
-    //   color: "text-green-700",
-    //   href: '/summarization',
-    // },
+    {
+      label: 'Video Welcome',
+      icon: ClipboardEdit ,
+      color: "text-green-700",
+      href: '/summarization',
+    },
     // {
     //   label: 'Chat with Naval Ravikant',
     //   icon: User,
