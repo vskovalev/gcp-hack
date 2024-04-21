@@ -72,49 +72,58 @@ const Hero = () => {
       title: 'Introduction to Finance',
       description: 'Learn the basics of finance.',
       price: 'Free',
+      image: '/Finance.png',
     },
     {
       id: 2,
       title: 'Introduction to Finance',
       description: 'Learn the basics of finance.',
       price: 'Free',
+      image: '/Finance2.png',
     },
     {
       id: 3,
       title: 'Introduction to Finance',
       description: 'Learn the basics of finance.',
       price: 'Free',
+      image: '/Finance3.png',
     },
     {
       id: 4,
       title: 'Introduction to Finance',
       description: 'Learn the basics of finance.',
       price: 'Free',
+      image: '/Finance4.png',
     },
     {
       id: 5,
       title: 'Introduction to Finance',
       description: 'Learn the basics of finance.',
       price: 'Free',
+      image: '/Finance5.png',
     },
     {
       id: 6,
       title: 'Introduction to Finance',
       description: 'Learn the basics of finance.',
       price: 'Free',
+      image: '/Finance6.png',
     },
     {
-      id: 6,
+      id: 7,
       title: 'Introduction to Finance',
       description: 'Learn the basics of finance.',
       price: 'Free',
+      image: '/Finance7.png',
     },
     {
-      id: 6,
+      id: 8,
       title: 'Introduction to Finance',
       description: 'Learn the basics of finance.',
       price: 'Free',
+      image: '/Finance8.png',
     },
+    
     // ... more courses
   ];
 
@@ -172,12 +181,40 @@ const Hero = () => {
 
 
       <div className="container mx-auto px-4 py-8">
-        <h2 className="text-3xl font-bold text-center mb-6">Featured Courses</h2>
+        {/* <h2 className="text-3xl font-bold text-center mb-6">Featured Courses</h2> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {courses.map((course) => (
+        {courses.map((course) => (
+            <div key={course.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-48 w-full relative"> {/* Fix the height of the container */}
+                <Image 
+                  src={course.image}
+                  alt={course.title}
+                  layout="fill"
+                  objectFit="cover" // This will cover the area, cropping the image if necessary
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold">{course.title}</h3>
+                <p className="text-sm text-gray-600 mt-1">{course.description}</p>
+                <div className="flex items-center mt-2">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <Star className="w-5 h-5 text-yellow-400" />
+                </div>
+                <div className="flex justify-between items-center mt-3">
+                  <span className="text-lg font-bold">{course.price}</span>
+                  <button className="px-2 py-1 bg-blue-500 text-white text-xs font-bold uppercase rounded">Enroll</button>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {/* {courses.map((course) => (
             <div key={course.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <Image 
-                src="/Finance.png" 
+                src={course.image} 
                 alt="Finance course" 
                 width={320} 
                 height={180} 
@@ -199,7 +236,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
 
