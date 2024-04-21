@@ -25,12 +25,12 @@ const routes = [
       href: '/conversation',
       color: "text-violet-500",
     },
-    // {
-    //   label: 'Image Generation',
-    //   icon: ImageIcon,
-    //   color: "text-pink-700",
-    //   href: '/image',
-    // },
+    {
+      label: 'Challenge',
+      icon: ImageIcon,
+      color: "text-pink-700",
+      href: '/image',
+    },
     
     // {
     //   label: 'Text Summarization',
